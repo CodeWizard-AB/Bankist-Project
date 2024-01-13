@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Anunay Argha" />
+		<link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Bankist App</title>
+
+		<!-- ? CSS REFERENCE -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- ? HEADER / LOGIN -->
+
+		<header class="container">
+			<h2 class="welcome_heading">Log in to get started</h2>
+			<figure class="bank_logo">
+				<img src="logo.png" alt="Bank Logo" />
+			</figure>
+			<form action="#" class="login_form">
+				<input
+					type="text"
+					required
+					placeholder="user"
+					class="user_name user_login"
+				/>
+				<input
+					type="text"
+					maxlength="4"
+					required
+					placeholder="PIN"
+					class="user_pin user_login"
+				/>
+				<button class="login_btn">
+					<ion-icon name="log-in-outline" size="large"></ion-icon>
+				</button>
+			</form>
+		</header>
+
+		<!-- ? MAIN BODY / BANK BODY -->
+
+		<main class="app">
+			<!-- ? CURRENT CONDITION -->
+
+			<div class="current">
+				<p class="current_title">Current balance</p>
+				<p class="current_time">As of 03/01/2024, 23:12</p>
+			</div>
+
+			<!-- ? NET BALANCE -->
+
+			<div class="current_balance">
+				<p class="bank_balance">25, 598$</p>
+			</div>
+
+			<!-- ? MONEY MOVEMENTS -->
+
+			<div class="movements">
+				<div class="movement">
+					<p class="movement_money type_deposit">2 deposits</p>
+					<p class="movement_date">12/03/2021</p>
+					<p class="movement_amount">4,000$</p>
+				</div>
+
+				<div class="movement">
+					<p class="movement_money type_withdrawl">5 withdrawal</p>
+					<p class="movement_date">12/04/2023</p>
+					<p class="movement_amount">1,000$</p>
+				</div>
+			</div>
+
+			<!-- ? TRANSFER OPERATION -->
+
+			<div class="operation operation_transfer">
+				<h3>Transfer money</h3>
+				<form action="#">
+					<label for="transfer">
+						<input type="text" id="transfer" />
+						<p class="operation_des">Transfer to</p>
+					</label>
+					<label for="transfer_amount">
+						<input type="number" min="0" id="transfer_amount" />
+						<p class="operation_des">Amount</p>
+					</label>
+					<button class="operation_btn transfer--btn">
+						<ion-icon name="log-in-outline" size="large"></ion-icon>
+					</button>
+				</form>
+			</div>
+
+			<!-- ? LOAN OPERATION -->
+
+			<div class="operation operation_loan">
+				<h3>Request loan</h3>
+				<form action="#">
+					<label for="loan">
+						<input type="number" min="0" id="loan" />
+						<p class="operation_des">Amount</p>
+					</label>
+					<button class="operation_btn loan--btn">
+						<ion-icon name="log-in-outline" size="large"></ion-icon>
+					</button>
+				</form>
+			</div>
+
+			<!-- ? CLOSE OPERATION -->
+
+			<div class="operation operation_close">
+				<h3>Transfer money</h3>
+				<form action="#">
+					<label for="user_confirm">
+						<input type="text" id="user_confirm" />
+						<p class="operation_des">Confirm user</p>
+					</label>
+					<label for="confirm_pin">
+						<input type="number" min="0" id="confirm_pin" />
+						<p class="operation_des">Confirm pin</p>
+					</label>
+					<button class="operation_btn close--btn">
+						<ion-icon name="log-in-outline" size="large"></ion-icon>
+					</button>
+				</form>
+			</div>
+
+			<!-- ? APP SUMMARY -->
+
+			<div class="summary">
+				<p>IN <span class="summary_in summary_amount">10, 0235$</span></p>
+				<p>OUT <span class="summary_out summary_amount">45, 0235$</span></p>
+				<p>
+					INTEREST <span class="summary_interest summary_amount">5, 235$</span>
+				</p>
+				<p>SORT</p>
+			</div>
+
+			<!-- ? APP TIMER -->
+			<div class="timer">
+				<p>You will be logged out in <span class="timer_logout">5:00</span></p>
+			</div>
+		</main>
+
+		<!-- ? JS REFERENCE -->
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<script defer src="script.js"></script>
+	</body>
+</html>
